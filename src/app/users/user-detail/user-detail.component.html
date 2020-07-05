@@ -1,0 +1,16 @@
+<div *ngIf="user" >
+   <h2 class="p-2 mb-2 bg-secondary text-white text-center">
+        {{ user.name | uppercase }} Detail
+   </h2>
+   <div class="form-group  row justify-content-md-center">
+     <label for="username"  class="col-sm-2 col-form-label">
+        {{ user.name }}
+      </label>
+      <div class="col-sm-10 col-lg-5 my-3">
+          <input [(ngModel)]="user.name" placeholder="user name" name="username" type="text"  class="form-control">
+      </div>        
+  </div>
+  
+    <div class="text-center">
+          <button (click)="goBack()" class="btn btn-secondary">Go Back</button>
+    </div>
